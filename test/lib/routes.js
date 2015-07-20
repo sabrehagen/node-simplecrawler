@@ -42,6 +42,10 @@ module.exports = {
 		// We want to trigger a timeout. Never respond.
 	},
 
+	"/timeout2": function(write) {
+		// We want to trigger a timeout. Never respond.
+	},
+
 	// Routes for depth tests
 	"/depth/1": function(write) {
 		write(200,"<link rel='stylesheet' href='/css'> Home. <a href='/depth/2'>depth2</a>");
@@ -85,5 +89,9 @@ module.exports = {
 
 	"/font/2": function(write) {
 		write(200,"", "application/font-woff");
+	},
+
+	"/410": function(write) {
+		write(410,"this page no longer exists!");
 	}
 };
